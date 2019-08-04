@@ -55,7 +55,6 @@ int main(int argc, char const *argv[])
 				printf("%d ", arr[k][left] );
 			left++;
 		}
-
 		dir = (dir+1)%4;
 	}
 
