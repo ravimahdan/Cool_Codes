@@ -2,7 +2,14 @@
 * Xoriant Company Question
 * Q. Enter integers until negative number is entered and then print the number
 *    which is less than 100 but highest among the numbers which are less than 100.
+* -----------------------------------------------
+* Author   : Ravi Mahdan
+* Email	   : inforavimahdan@gmail.com
+* LinkedIn : https://www.linkedin.com/ravimahdan
+* -----------------------------------------------
 */
+
+//Include Standard Input/Output Header File.
 #include <stdio.h>
 
 //Array Size.
