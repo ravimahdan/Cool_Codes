@@ -47,7 +47,7 @@ int main(){
 		//Counter Increment
 		++i;
 	}
-	printf("Unsorted Array: \n");
+	printf("Given Elements: \n");
 	for(int j = 0; j < i; ++j){
 		printf("%d\t",arr[j]);
 	}
