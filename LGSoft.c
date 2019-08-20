@@ -11,13 +11,28 @@
 #include <stdio.h>
 
 int findMin(int N, int A[]){
-        int sum = 0, i, j, value;
+        int sum = 0, i, j, k, value = 0;
         
         for(i = 0; i < N; i++){ sum = sum + A[i]; }
-        
-        for(j = 2; j < N; j++){
-            if( (sum % j ) == 0){
-                value = (sum / j);
+        if((sum % 2 ) == 0){
+            //Even Sum
+            printf("Even Sum %d\n",sum);
+            for(j = 2; j < sum; j++){
+                if( (sum % j ) == 0){
+                    value = (sum / j);
+                }
+            }
+            
+        }
+        else{
+            printf("Odd Sum %d\n",sum);
+            for(k = 3; k < sum; (k+=2)){
+                if( (sum % k ) == 0){
+                    value = (sum / k);
+                }
+                else{
+                    value = (sum / k) + 1;
+                }
             }
         }
         printf("Minimum No of Blocks required are %d\n",value);        
