@@ -1,0 +1,23 @@
+' -----------------------------------------------
+' Author   : Ravi Mahdan
+' Email	   : inforavimahdan@gmail.com
+' LinkedIn : https://www.linkedin.com/ravimahdan
+' -----------------------------------------------
+import sys
+import os
+
+time  = list(map(int,input().strip().split()))[:2]
+reach = list(map(int,input().strip().split()))[:2]
+
+hh = int(time[0]) + int(reach[0]);
+mm = int(time[1]) + int(reach[1]);
+
+while(mm > 59):
+    updated_mm = mm - 60;
+    mm = updated_mm
+    hh += 1;
+if hh > 23:
+    updated_hh = hh - 24;
+    hh = updated_hh;
+
+print (f"{hh:02d}", f"{mm:02d}");
