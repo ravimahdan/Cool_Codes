@@ -1,0 +1,42 @@
+' -----------------------------------------------
+' Author   : Ravi Mahdan
+' Email	   : inforavimahdan@gmail.com
+' LinkedIn : https://www.linkedin.com/ravimahdan
+' -----------------------------------------------
+
+import sys
+import os
+
+#Total Test cases.
+tc = int(input());
+g_itr = 0;
+l_itr = 0;
+count = 0;
+sumArray = [];
+int_canBuy = 0;
+int_availGift = 0;
+int_priceOfGift = [];
+
+while(g_itr < tc):
+    #No of gifts.
+    canBuy = int(input());
+    
+    #Avaialble no of gift.
+    availGift = int(input());
+    
+    #Price of Gifts.
+    int_priceOfGift = list(map(int,input().strip().split()))[:availGift]
+    int_priceOfGift.sort();
+
+    while (l_itr < canBuy):
+        count += int(int_priceOfGift[l_itr]);
+        # print (count);
+        l_itr += 1;
+    
+    sumArray.append(count);
+    l_itr = 0;
+    count = 0;
+    g_itr += 1;
+
+for x in range(0, len(sumArray)):
+    print (sumArray[x]);
